@@ -1,0 +1,19 @@
+Data Tables
+
+Entries
+    -ID
+    -User_id
+    -Text
+    -(created)
+    -Modified
+
+Users
+    -ID
+    -Username
+    -Password
+
+Sharing
+    -ID
+    -User_owner_id
+    -entry_id
+    -shared_with_id

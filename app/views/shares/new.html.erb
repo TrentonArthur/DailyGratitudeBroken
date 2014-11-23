@@ -1,0 +1,103 @@
+<% if @share.errors.any? %>
+  <% @share.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h1>Add Share</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_share" class="form-horizontal">
+      <!-- Label and input for shareowner -->
+      <div class="form-group">
+        <label for="shareowner" class="col-sm-2 control-label">
+          Shareowner
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="shareowner" name="shareowner" placeholder="Shareowner" class="form-control" value="<%= @share.shareowner %>">
+        </div>
+      </div>
+
+      <!-- Label and input for sharewith -->
+      <div class="form-group">
+        <label for="sharewith" class="col-sm-2 control-label">
+          Sharewith
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="sharewith" name="sharewith" placeholder="Sharewith" class="form-control" value="<%= @share.sharewith %>">
+        </div>
+      </div>
+
+      <!-- Label and input for entryid -->
+      <div class="form-group">
+        <label for="entryid" class="col-sm-2 control-label">
+          Entryid
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="entryid" name="entryid" placeholder="Entryid" class="form-control" value="<%= @share.entryid %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <input type="submit" value="Create Share" class="btn btn-primary">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add Share</h3>
+      </div>
+      <div class="panel-body">
+        <form action="/create_share" class="form-horizontal">
+          <!-- Label and input for shareowner -->
+          <div class="form-group">
+            <label for="shareowner" class="col-sm-2 control-label">
+              Shareowner
+            </label>
+            <div class="col-sm-10">
+              <input type="text" id="shareowner" name="shareowner" placeholder="Shareowner" class="form-control" value="<%= @share.shareowner %>">
+            </div>
+          </div>
+
+          <!-- Label and input for sharewith -->
+          <div class="form-group">
+            <label for="sharewith" class="col-sm-2 control-label">
+              Sharewith
+            </label>
+            <div class="col-sm-10">
+              <input type="text" id="sharewith" name="sharewith" placeholder="Sharewith" class="form-control" value="<%= @share.sharewith %>">
+            </div>
+          </div>
+
+          <!-- Label and input for entryid -->
+          <div class="form-group">
+            <label for="entryid" class="col-sm-2 control-label">
+              Entryid
+            </label>
+            <div class="col-sm-10">
+              <input type="text" id="entryid" name="entryid" placeholder="Entryid" class="form-control" value="<%= @share.entryid %>">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit" value="Create Share" class="btn btn-primary">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
